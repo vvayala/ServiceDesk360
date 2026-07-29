@@ -2,6 +2,7 @@
 nbproject/private/
 build/
 dist/
+target/
 
 # Archivos de Java
 *.class
@@ -15,3 +16,15 @@ npm-debug.log
 # Otros
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# IDE configs
+*.iml
+.idea/
+.vscode/
+
+# Sistema
+*.swp
+
