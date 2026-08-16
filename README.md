@@ -17,6 +17,13 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - Cookies para recordar usuario (`ultimoUsuario`)  
 - Pruebas de autenticación y persistencia de sesión  
 
+## Tecnologías de la semana 3  
+- Refactorización de servlets con servicios (`ServicioRegistro`, `Autenticador`)  
+- Modelo POO con clases de dominio (`Usuario`, `Solicitante`, `Tecnico`, `TicketSoporte`)  
+- Principios SOLID aplicados en diseño e implementación  
+- Prueba de dominio (`PruebaModelo.java`)  
+- Diagramas UML (clases, entidades y responsabilidades)  
+
 ## Requisitos 
 1. JDK configurado.  
 2. Tomcat 9 registrado en el IDE.  
@@ -37,6 +44,13 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
   - Eliminación de cookie al desactivar “Recordar correo”.  
   - Logout invalida sesión y bloquea acceso al panel.  
   - Reinicio de Tomcat elimina usuarios temporales.  
+
+## Detalles de la semana 3  
+- **Refactorización**: separación de lógica en servicios (`ServicioRegistro`, `Autenticador`).  
+- **Modelo POO**: creación de clases `Usuario`, `Solicitante`, `Tecnico`, `TicketSoporte`.  
+- **Prueba de dominio**: ejecución de `PruebaModelo.java` para validar relaciones.  
+- **Documentación**: matriz de entidades y responsabilidades, tabla de principios SOLID.  
+- **Diagramas UML**: representación de herencia, composición y multiplicidades.  
 
 ## Equipo  
 - Vilic Ayala  
