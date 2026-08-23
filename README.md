@@ -24,6 +24,13 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - Prueba de dominio (`PruebaModelo.java`)  
 - Diagramas UML (clases, entidades y responsabilidades)  
 
+## Tecnologías de la semana 4  
+- Controladores adicionales para tickets (`TicketListadoServlet`, `TicketNuevoServlet`)  
+- Integración de servicios en `ServletContextListener` (`ServicioTickets`)  
+- JSP con JSTL (`<c:forEach>`, `<c:if>`, `<c:out>`) para listado y formularios  
+- Validaciones de negocio en `ServicioTickets` (título, descripción, prioridad)  
+- Patrón PRG (Post/Redirect/Get) aplicado en creación de tickets  
+
 ## Requisitos 
 1. JDK configurado.  
 2. Tomcat 9 registrado en el IDE.  
@@ -51,6 +58,12 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - **Prueba de dominio**: ejecución de `PruebaModelo.java` para validar relaciones.  
 - **Documentación**: matriz de entidades y responsabilidades, tabla de principios SOLID.  
 - **Diagramas UML**: representación de herencia, composición y multiplicidades.  
+
+## Detalles de la semana 4  
+- **Controladores de tickets**: `TicketListadoServlet` para listar y `TicketNuevoServlet` para crear.  
+- **Inicialización de servicios**: `ServicioTickets` registrado en el `ServletContext`.  
+- **Validaciones**: título mínimo 5 caracteres, descripción mínima 10, prioridad obligatoria.  
+- **Patrón PRG**: creación de ticket → redirect a `/tickets?estado=creado`.  
 
 ## Equipo  
 - Vilic Ayala  
