@@ -31,31 +31,40 @@ public class RegistroServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
+        try {
+            request.setCharacterEncoding("UTF-8");
 
-        String nombre = request.getParameter("nombre");
-        String correo = request.getParameter("correo");
-        String rol = request.getParameter("rol");
-        String clave = request.getParameter("clave");
-        String confirmar = request.getParameter("confirmarClave");
+            String nombre = request.getParameter("nombre");
+            String correo = request.getParameter("correo");
+            String rol = request.getParameter("rol");
+            String clave = request.getParameter("clave");
+            String confirmar = request.getParameter("confirmarClave");
 
-        // Delegamos la validación y registro al servicio
-        List<String> errores = obtenerServicioRegistro().registrar(
-                nombre, correo, rol, clave, confirmar);
+            // Delegamos la validación y registro al servicio
+            List<String> errores = obtenerServicioRegistro().registrar(
+                    nombre, correo, rol, clave, confirmar);
 
-        if (!errores.isEmpty()) {
-            request.setAttribute("errores", errores);
-            request.setAttribute("nombreAnterior", nombre);
-            request.setAttribute("correoAnterior", correo);
-            request.setAttribute("rolAnterior", rol);
-            request.getRequestDispatcher("/registro.jsp")
+            if (!errores.isEmpty()) {
+                request.setAttribute("errores", errores);
+                request.setAttribute("nombreAnterior", nombre);
+                request.setAttribute("correoAnterior", correo);
+                request.setAttribute("rolAnterior", rol);
+                request.getRequestDispatcher("/registro.jsp")
+                       .forward(request, response);
+                return;
+            }
+
+            HttpSession sesion = request.getSession();
+            sesion.setAttribute("mensajeFlash",
+                    "Cuenta registrada correctamente. Inicie acceso.");
+            response.sendRedirect(request.getContextPath() + "/acceso");
+
+        } catch (RuntimeException ex) {
+            getServletContext().log("Error al registrar usuario", ex);
+            request.setAttribute("mensajeError",
+                    "Ocurrió un error inesperado al registrar la cuenta. Intente nuevamente.");
+            request.getRequestDispatcher("/WEB-INF/views/error.jsp")
                    .forward(request, response);
-            return;
         }
-
-        HttpSession sesion = request.getSession();
-        sesion.setAttribute("mensajeFlash",
-                "Cuenta registrada correctamente. Inicie acceso.");
-        response.sendRedirect(request.getContextPath() + "/acceso");
     }
 }

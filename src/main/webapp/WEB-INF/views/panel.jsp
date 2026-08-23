@@ -14,6 +14,8 @@
     <p>Correo: ${sessionScope.usuarioAutenticado.correo}</p> 
     <p>Rol: ${sessionScope.usuarioAutenticado.rol}</p> 
     <p>Estado activo: ${sessionScope.usuarioAutenticado.activo}</p> 
+    <a href="${pageContext.request.contextPath}/tickets"> 
+    Gestionar tickets </a> 
  
     <div class="tarjetas-panel"> 
         <section class="tarjeta-panel"> 
