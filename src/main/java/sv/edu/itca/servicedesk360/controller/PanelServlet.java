@@ -16,16 +16,25 @@ public class PanelServlet extends HttpServlet {
                          HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession sesion = request.getSession(false);
+        try {
+            HttpSession sesion = request.getSession(false);
 
-        if (sesion == null
-                || sesion.getAttribute("usuarioAutenticado") == null) {
-            response.sendRedirect(
-                    request.getContextPath() + "/acceso?estado=sesion");
-            return;
+            if (sesion == null
+                    || sesion.getAttribute("usuarioAutenticado") == null) {
+                response.sendRedirect(
+                        request.getContextPath() + "/acceso?estado=sesion");
+                return;
+            }
+
+            request.getRequestDispatcher("/WEB-INF/views/panel.jsp")
+                   .forward(request, response);
+
+        } catch (RuntimeException ex) {
+            getServletContext().log("Error al cargar el panel", ex);
+            request.setAttribute("mensajeError",
+                    "Ocurrió un error inesperado al cargar el panel. Intente nuevamente.");
+            request.getRequestDispatcher("/WEB-INF/views/error.jsp")
+                   .forward(request, response);
         }
-
-        request.getRequestDispatcher("/panel.jsp")
-               .forward(request, response);
     }
 }

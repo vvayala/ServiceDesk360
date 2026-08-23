@@ -55,39 +55,49 @@ public class AccesoServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
-        String correo = request.getParameter("correo");
-        String clave = request.getParameter("clave");
+        try {
+            request.setCharacterEncoding("UTF-8");
+            String correo = request.getParameter("correo");
+            String clave = request.getParameter("clave");
 
-        Optional<Usuario> resultado =
-                obtenerAutenticador().autenticar(correo, clave);
+            Optional<Usuario> resultado =
+                    obtenerAutenticador().autenticar(correo, clave);
 
-        if (!resultado.isPresent()) {
+            if (!resultado.isPresent()) {
+                request.setAttribute("mensajeError",
+                        "Correo o contraseña incorrectos.");
+                request.setAttribute("ultimoUsuario", correo);
+                request.getRequestDispatcher("/login.jsp")
+                       .forward(request, response);
+                return;
+            }
+
+            HttpSession anterior = request.getSession(false);
+            if (anterior != null) {
+                anterior.invalidate();
+            }
+
+            Usuario usuario = resultado.get();
+            HttpSession sesion = request.getSession(true);
+            sesion.setMaxInactiveInterval(15 * 60);
+            sesion.setAttribute("usuarioAutenticado", usuario);
+
+            if ("si".equals(request.getParameter("recordar"))) {
+                agregarCookieCorreo(request, response, usuario.getCorreo());
+            } else {
+                eliminarCookieCorreo(request, response);
+            }
+
+            response.sendRedirect(request.getContextPath() + "/panel");
+
+        } catch (RuntimeException ex) {
+            getServletContext().log(
+                    "Error al procesar el ticket", ex);
             request.setAttribute("mensajeError",
-                    "Correo o contraseña incorrectos.");
-            request.setAttribute("ultimoUsuario", correo);
-            request.getRequestDispatcher("/login.jsp")
+                    "Ocurrió un error inesperado. Intente nuevamente.");
+            request.getRequestDispatcher("/WEB-INF/views/error.jsp")
                    .forward(request, response);
-            return;
         }
-
-        HttpSession anterior = request.getSession(false);
-        if (anterior != null) {
-            anterior.invalidate();
-        }
-
-        Usuario usuario = resultado.get();
-        HttpSession sesion = request.getSession(true);
-        sesion.setMaxInactiveInterval(15 * 60);
-        sesion.setAttribute("usuarioAutenticado", usuario);
-
-        if ("si".equals(request.getParameter("recordar"))) {
-            agregarCookieCorreo(request, response, usuario.getCorreo());
-        } else {
-            eliminarCookieCorreo(request, response);
-        }
-
-        response.sendRedirect(request.getContextPath() + "/panel");
     }
 
     private void agregarCookieCorreo(HttpServletRequest request,
