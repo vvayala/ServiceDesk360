@@ -29,7 +29,17 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - Integración de servicios en `ServletContextListener` (`ServicioTickets`)  
 - JSP con JSTL (`<c:forEach>`, `<c:if>`, `<c:out>`) para listado y formularios  
 - Validaciones de negocio en `ServicioTickets` (título, descripción, prioridad)  
-- Patrón PRG (Post/Redirect/Get) aplicado en creación de tickets  
+- Patrón PRG (Post/Redirect/Get) aplicado en creación de tickets
+
+- 
+- ## Tecnologías de la semana 6  
+- MySQL Server 8.0 o superior  
+- MySQL Workbench para modelado y pruebas  
+- JDBC con MySQL Connector/J administrado por Maven  
+- Clase de conexión reutilizable (`ConexionBD`) con configuración externa (`db.properties`)  
+- Consultas parametrizadas con `PreparedStatement`  
+- Recuperación de claves AUTO_INCREMENT con `Statement.RETURN_GENERATED_KEYS`  
+- Implementación de transacciones con `commit` y `rollback`  
 
 ## Requisitos 
 1. JDK configurado.  
@@ -63,7 +73,18 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - **Controladores de tickets**: `TicketListadoServlet` para listar y `TicketNuevoServlet` para crear.  
 - **Inicialización de servicios**: `ServicioTickets` registrado en el `ServletContext`.  
 - **Validaciones**: título mínimo 5 caracteres, descripción mínima 10, prioridad obligatoria.  
-- **Patrón PRG**: creación de ticket → redirect a `/tickets?estado=creado`.  
+- **Patrón PRG**: creación de ticket → redirect a `/tickets?estado=creado`.
+
+## Detalles de la semana 6  
+- **Esquema relacional**: creación de tablas `clientes`, `equipos`, `tecnicos`, `categorias`, `tickets`, `seguimientos` con claves primarias, foráneas y restricciones (`NOT NULL`, `UNIQUE`, `CHECK`).  
+- **Usuario de aplicación**: cuenta `servicedesk_app` con privilegios limitados para evitar uso de root.  
+- **Clase de conexión**: `ConexionBD` carga credenciales desde archivo externo, evitando contraseñas en el repositorio.  
+- **Prueba de conexión**: validación de metadatos (`DatabaseMetaData`) y estado de conexión (`isValid`).  
+- **Consultas parametrizadas**: búsqueda de clientes por correo con `PreparedStatement`, evitando SQL injection.  
+- **Inserción con clave generada**: recuperación de `id_cliente` mediante `getGeneratedKeys`.  
+- **Transacción controlada**: registro de ticket y seguimiento inicial como unidad atómica; rollback si alguna operación falla.  
+- **Matriz de pruebas**: validación de integridad referencial, inserciones correctas, errores esperados y confirmación de rollback.  
+
 
 ## Equipo  
 - Vilic Ayala  
