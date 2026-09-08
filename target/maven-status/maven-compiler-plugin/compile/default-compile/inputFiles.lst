@@ -25,8 +25,10 @@ C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\se
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\DiagnosticoServlet.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\Autenticador.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\RegistradorCuentas.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\PruebaConexion.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\CuentaUsuario.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\Tecnico.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\PanelServlet.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\ConexionBD.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\ValidadorRegistro.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\PrioridadTicket.java
