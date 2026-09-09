@@ -10,14 +10,19 @@ sv\edu\itca\servicedesk360\controller\PanelServlet.class
 sv\edu\itca\servicedesk360\persistence\ClienteDAOPrueba.class
 sv\edu\itca\servicedesk360\persistence\ClienteRegistro.class
 sv\edu\itca\servicedesk360\model\EstadoTicket.class
+sv\edu\itca\servicedesk360\persistence\TicketReader.class
+sv\edu\itca\servicedesk360\persistence\TicketVista.class
+sv\edu\itca\servicedesk360\model\Cliente.class
 sv\edu\itca\servicedesk360\service\ServicioRegistro.class
 sv\edu\itca\servicedesk360\storage\RegistradorCuentas.class
 sv\edu\itca\servicedesk360a\JAXRSConfiguration.class
 sv\edu\itca\servicedesk360\service\ValidadorRegistro.class
 sv\edu\itca\servicedesk360\model\Tecnico.class
 sv\edu\itca\servicedesk360\model\Usuario.class
+sv\edu\itca\servicedesk360\dao\impl\ClienteDAOImpl.class
 sv\edu\itca\servicedesk360a\resources\JavaEE8Resource.class
 sv\edu\itca\servicedesk360\controller\TicketNuevoServlet.class
+sv\edu\itca\servicedesk360\dao\ClienteDAO.class
 sv\edu\itca\servicedesk360\model\CuentaUsuario.class
 sv\edu\itca\servicedesk360\model\TicketSoporte.class
 sv\edu\itca\servicedesk360\storage\RegistradorTickets.class
@@ -35,3 +40,5 @@ sv\edu\itca\servicedesk360\model\RolUsuario.class
 sv\edu\itca\servicedesk360\persistence\ConexionBD.class
 sv\edu\itca\servicedesk360\service\Autenticador.class
 sv\edu\itca\servicedesk360\config\AplicacionListener.class
+sv\edu\itca\servicedesk360\controller\ClienteServlet.class
+sv\edu\itca\servicedesk360\dao\DAOException.class

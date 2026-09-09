@@ -2,11 +2,15 @@ C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\se
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\BuscadorTickets.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\RolUsuario.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\ServicioAutenticacion.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\ClienteServlet.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\TicketNuevoServlet.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\dao\impl\ClienteDAOImpl.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\TicketListadoServlet.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\TicketReader.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\CerrarSesionServlet.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\Usuario.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\ServicioRegistro.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\TicketServiceDAOPrueba.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\RegistradorTickets.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360a\resources\JavaEE8Resource.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\config\AplicacionListener.java
@@ -16,9 +20,11 @@ C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\PruebaModelo.j
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\RegistroServlet.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\DirectorioTicketsEnMemoria.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\SeguridadClave.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\ClienteDAOPrueba.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\TicketSoporte.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360a\JAXRSConfiguration.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\BuscadorCuentas.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\dao\DAOException.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\EstadoTicket.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\Solicitante.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\storage\DirectorioCuentasEnMemoria.java
@@ -29,6 +35,8 @@ C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\se
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\CuentaUsuario.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\Tecnico.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\controller\PanelServlet.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\Cliente.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\persistence\ConexionBD.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\service\ValidadorRegistro.java
+C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\dao\ClienteDAO.java
 C:\Users\vilic\OneDrive\Desktop\DAM\ServiceDesk360a\src\main\java\sv\edu\itca\servicedesk360\model\PrioridadTicket.java

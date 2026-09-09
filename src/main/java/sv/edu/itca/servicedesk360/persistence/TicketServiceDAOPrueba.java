@@ -68,7 +68,7 @@ public class TicketServiceDAOPrueba {
     
     public static void main(String[] args){
             TicketServiceDAOPrueba ticket = new TicketServiceDAOPrueba();
-            String detalleErroneo = "X".repeat(1000);
+            //String detalleErroneo = "X".repeat(1000);
             
             try{
                 long idGenerado = ticket.registrarTicketConSeguimiento(
@@ -76,8 +76,8 @@ public class TicketServiceDAOPrueba {
                         "Error al ingresar al portal", 
                         "El usuario recibe un mensaje al autenticar.", 
                         "MEDIA", 
-                        //"Ticket registrado desde la Guía 5");
-                        detalleErroneo);
+                        "Ticket registrado desde la Guía 5");
+                        //detalleErroneo);
                 
                 System.out.println("Ticket confirmado: " + idGenerado); 
 
