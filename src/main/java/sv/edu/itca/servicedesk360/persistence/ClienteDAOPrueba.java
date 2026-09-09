@@ -107,7 +107,9 @@ class ClienteRegistro {
             ClienteDAOPrueba dao = new ClienteDAOPrueba();
             
             try{
-                ClienteRegistro cliente = dao.buscarClientePorCorreo( "' OR '1'='1");
+                //ClienteRegistro cliente = dao.buscarClientePorCorreo( "' OR '1'='1");
+                ClienteRegistro cliente = dao.buscarClientePorCorreo( "ana.lopez@demo.local");
+
                 System.out.println(cliente == null 
                 ? "Entrada tratada como dato: sin coincidencias" 
                 : "Revisar implementación");
