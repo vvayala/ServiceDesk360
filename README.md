@@ -39,7 +39,16 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - Clase de conexión reutilizable (`ConexionBD`) con configuración externa (`db.properties`)  
 - Consultas parametrizadas con `PreparedStatement`  
 - Recuperación de claves AUTO_INCREMENT con `Statement.RETURN_GENERATED_KEYS`  
-- Implementación de transacciones con `commit` y `rollback`  
+- Implementación de transacciones con `commit` y `rollback`
+
+## Tecnologías de la semana 7  
+-Se crea el CRUD Clientes implementando DAO.
+- Confirmación de eliminación física con formulario POST independiente y validación en servidor.  
+- Manejo controlado de integridad referencial en DAO mediante captura de `SQLException`.  
+- Uso de Bootstrap en todas las vistas JSP para unificar diseño y mejorar experiencia de usuario. (Agregado)
+- Pruebas de validación de entradas especiales (apóstrofes, duplicados) y control de errores de conexión.  
+- Persistencia garantizada tras reinicios de Tomcat y control de flujo con PRG.  
+
 
 ## Requisitos 
 1. JDK configurado.  
@@ -83,8 +92,14 @@ Caso modelo de una aplicación web para gestionar solicitudes de soporte técnic
 - **Consultas parametrizadas**: búsqueda de clientes por correo con `PreparedStatement`, evitando SQL injection.  
 - **Inserción con clave generada**: recuperación de `id_cliente` mediante `getGeneratedKeys`.  
 - **Transacción controlada**: registro de ticket y seguimiento inicial como unidad atómica; rollback si alguna operación falla.  
-- **Matriz de pruebas**: validación de integridad referencial, inserciones correctas, errores esperados y confirmación de rollback.  
 
+## Detalles de la semana 7  
+- **CRUD completo con DAO**: se implementaron operaciones de creación, lectura, actualización y eliminación sobre la entidad `Cliente`, utilizando clases DAO para encapsular la lógica de acceso a datos.  
+- **Validaciones de negocio**: se reforzaron reglas como evitar correos duplicados, impedir inserciones incompletas y controlar ediciones sobre IDs inexistentes.  
+- **Persistencia y robustez**: se verificó que los datos permanecen tras reinicios de Tomcat y que el patrón PRG evita duplicaciones en inserciones o actualizaciones.  
+- **Gestión de recursos**: todos los DAOs utilizan `try-with-resources` para garantizar el cierre automático de conexiones y evitar fugas.  
+- **Seguridad y buenas prácticas**: se procesaron entradas especiales (como apóstrofes) con `PreparedStatement` para prevenir SQL injection, y se confirmó que credenciales reales no se versionan en repositorios.  
+- **Interfaz con Bootstrap**: las vistas JSP fueron adaptadas con componentes de Bootstrap (`alert`, `form-control`, `table`, `btn`) para mejorar la experiencia de usuario y mantener consistencia visual.  
 
 ## Equipo  
 - Vilic Ayala  
